@@ -18,8 +18,11 @@ jobs:
 
     - name: Install packages
       run: |
-        R -e 'install.packages("tidyverse")'
+        R -e 'install.packages("dplyr")'
+        R -e 'install.packages("stringr")'
         R -e 'install.packages("rvest")'
+        R -e 'install.packages("lubridate")'
+
 
     - name: scrape
       run: Rscript 'R/00_prepare.R'
